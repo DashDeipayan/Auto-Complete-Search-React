@@ -1,0 +1,9 @@
+.suggestions-box {
+	border-bottom: 1px solid #cfcfcf;
+	border-right: 1px solid #cfcfcf;
+	border-left: 1px solid #cfcfcf;
+}
+.suggestions:hover {
+	background-color: #c7c7c7;
+	cursor: pointer;
+}

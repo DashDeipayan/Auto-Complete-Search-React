@@ -1,0 +1,64 @@
+{
+	"places": [
+		{
+			"id": "1",
+			"name": "kolkata"
+		},
+		{
+			"id": "2",
+			"name": "mumbai"
+		},
+		{
+			"id": "3",
+			"name": "new delhi"
+		},
+		{
+			"id": "4",
+			"name": "hyderabad"
+		},
+		{
+			"id": "5",
+			"name": "kuala lumpur"
+		},
+		{
+			"id": "6",
+			"name": "bangalore"
+		},
+		{
+			"id": "7",
+			"name": "chennai"
+		},
+		{
+			"id": "8",
+			"name": "paris"
+		},
+		{
+			"id": "9",
+			"name": "shanghai"
+		},
+		{
+			"id": "10",
+			"name": "new york"
+		},
+		{
+			"id": "11",
+			"name": "los angeles"
+		},
+		{
+			"id": "12",
+			"name": "milan"
+		},
+		{
+			"id": "13",
+			"name": "berlin"
+		},
+		{
+			"id": "14",
+			"name": "singapore"
+		},
+		{
+			"id": "15",
+			"name": "madrid"
+		}
+	]
+}

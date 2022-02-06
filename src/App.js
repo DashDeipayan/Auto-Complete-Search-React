@@ -1,25 +1,68 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { useState, useEffect } from "react";
+import { loadItems } from "./api/items";
+import { loadPersons } from "./api/persons";
+import { loadPlaces } from "./api/places";
+import Suggestions from "./components/suggestions";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	const [items, setItems] = useState([]);
+	const [persons, setPersons] = useState([]);
+	const [places, setPlaces] = useState([]);
+	const [text, setText] = useState("");
+	const [showSugesstion, setShowSuggestion] = useState(false);
+
+	useEffect(() => {
+		setTimeout(() => {
+			loadItems().then((items) => setItems(items));
+		}, 3000);
+		setTimeout(() => {
+			loadPersons().then((persons) => setPersons(persons));
+		}, 5000);
+		setTimeout(() => {
+			loadPlaces().then((places) => setPlaces(places));
+		}, 7000);
+	}, []);
+
+	const onChangeHandler = (text) => {
+		text.length > 0 ? setShowSuggestion(true) : setShowSuggestion(false);
+		setText(text);
+	};
+
+	return (
+		<div className="App">
+			<h1>Auto-Complete Search</h1>
+			<div className="search-box" style={{}}>
+				<input
+					className="search-field"
+					type="text"
+					placeholder="Search"
+					value={text}
+					onChange={(e) => onChangeHandler(e.target.value)}
+					onBlur={() => setTimeout(() => setShowSuggestion(false), 200)}
+				/>
+				{showSugesstion && (
+					<>
+						<Suggestions
+							onSearchSelect={(text) => onChangeHandler(text)}
+							setInputText={text}
+							data={items}
+						/>
+						<Suggestions
+							onSearchSelect={(text) => onChangeHandler(text)}
+							setInputText={text}
+							data={persons}
+						/>
+						<Suggestions
+							onSearchSelect={(text) => onChangeHandler(text)}
+							setInputText={text}
+							data={places}
+						/>
+					</>
+				)}
+			</div>
+		</div>
+	);
 }
 
 export default App;
