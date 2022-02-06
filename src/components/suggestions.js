@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import "./suggestions.css";
 
-const Suggestions = ({ data, setInputText, onSearchSelect }) => {
+const Suggestions = ({ data, setInputText, onSearchSelect, categoryTag }) => {
 	const [suggestions, setSuggestions] = useState([]);
 
 	useEffect(() => {
@@ -27,6 +27,7 @@ const Suggestions = ({ data, setInputText, onSearchSelect }) => {
 					}}
 				>
 					{suggestion.name}
+					<p style={{ fontSize: "13px", color: "#afafaf" }}>/{categoryTag}</p>
 				</div>
 			))}
 		</div>

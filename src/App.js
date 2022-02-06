@@ -46,16 +46,19 @@ function App() {
 						<Suggestions
 							onSearchSelect={(text) => onChangeHandler(text)}
 							setInputText={text}
+							categoryTag="items"
 							data={items}
 						/>
 						<Suggestions
 							onSearchSelect={(text) => onChangeHandler(text)}
 							setInputText={text}
+							categoryTag="persons"
 							data={persons}
 						/>
 						<Suggestions
 							onSearchSelect={(text) => onChangeHandler(text)}
 							setInputText={text}
+							categoryTag="places"
 							data={places}
 						/>
 					</>
