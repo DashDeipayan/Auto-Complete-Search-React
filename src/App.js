@@ -1,8 +1,8 @@
 import "./App.css";
 import { useState, useEffect } from "react";
-import { loadItems } from "./api/items";
-import { loadPersons } from "./api/persons";
-import { loadPlaces } from "./api/places";
+import { loadItems } from "./utils/api/items";
+import { loadPersons } from "./utils/api/persons";
+import { loadPlaces } from "./utils/api/places";
 import Suggestions from "./components/suggestions";
 
 function App() {
