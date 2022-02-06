@@ -31,7 +31,7 @@ function App() {
 
 	return (
 		<div className="App">
-			<h1>Auto-Complete Search</h1>
+			<h1>Type-ahead Search</h1>
 			<div className="search-box" style={{}}>
 				<input
 					className="search-field"
