@@ -21,7 +21,7 @@
 		"items": "npx json-server --watch data/items.json --port 8010",
 		"persons": "npx json-server --watch data/persons.json --port 8020",
 		"places": "npx json-server --watch data/places.json --port 8030",
-		"start": "concurrently \"npm dev\" \"npm run items\" \"npm run persons\" \"npm run places\""
+		"start": "concurrently \"npm run dev\" \"npm run items\" \"npm run persons\" \"npm run places\""
 	},
 	"eslintConfig": {
 		"extends": [
